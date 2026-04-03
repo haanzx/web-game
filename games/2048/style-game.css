@@ -1,0 +1,155 @@
+/* --- 1. RESET & VARIABLE --- */
+:root {
+    --bg-main: #faf8ef;
+    --dark-brown: #776e65;
+    --light-brown: #8f7a66;
+    --accent: #edc22e;
+    --tile-bg: #eee4da;
+    --grid-bg: #bbada0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--dark-brown);
+    overflow: hidden;
+    overscroll-behavior-y: contain;
+}
+
+/* --- 2. TAMPILAN MENU (index.html) --- */
+.menu-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 300px;
+    text-align: center;
+    z-index: 10;
+}
+
+.logo {
+    background: var(--accent);
+    color: white;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 0 auto 10px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--tile-bg);
+    color: var(--dark-brown);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.1s;
+}
+
+.btn:active { transform: scale(0.95); }
+
+.btn-exit {
+    background: transparent;
+    border: 2px solid #eee;
+    color: #a5a09a;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- 3. TAMPILAN GAME (play.html) --- */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-header {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score-box {
+    background: var(--grid-bg);
+    padding: 5px 20px;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+}
+
+#grid-container {
+    position: relative;
+    background-color: var(--grid-bg);
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    padding: 10px;
+    touch-action: none;
+}
+
+/* Kotak latar belakang (statis) */
+.grid-cell {
+    position: absolute;
+    background-color: rgba(238, 228, 218, 0.35);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Kotak angka (dinamis) */
+.tile {
+    position: absolute;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 10;
+    transition: left 0.15s ease-out, top 0.15s ease-out, transform 0.1s ease-out;
+}
+
+/* --- 4. WARNA ANGKA --- */
+.tile-2 { background: #eee4da; color: #776e65; }
+.tile-4 { background: #ede0c8; color: #776e65; }
+.tile-8 { background: #f2b179; color: white; }
+.tile-16 { background: #f59563; color: white; }
+.tile-32 { background: #f67c5f; color: white; }
+.tile-64 { background: #f65e3b; color: white; }
+.tile-128 { background: #edcf72; color: white; font-size: 1.4rem !important; }
+.tile-256 { background: #edcc61; color: white; font-size: 1.4rem !important; }
+.tile-512 { background: #edc850; color: white; font-size: 1.4rem !important; }
+.tile-1024 { background: #edc53f; color: white; font-size: 1.1rem !important; }
+.tile-2048 { background: #edc22e; color: white; box-shadow: 0 0 10px gold; }
+
+@keyframes pop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.tile-new { animation: pop 0.15s ease-out; }

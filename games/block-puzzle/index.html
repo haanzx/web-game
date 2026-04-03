@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Block Puzzle - Menu</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="screen-overlay block-theme">
+        <div class="menu-content">
+            <h1 class="game-title">BLOCK<br>PUZZLE</h1>
+            <div class="best-score-tag">BEST: <span id="best-menu">0</span></div>
+            
+            <nav class="menu-buttons">
+                <button class="menu-btn play-btn" onclick="location.href='play.html'">PLAY</button>
+                <button class="menu-btn secondary" onclick="location.href='../../index.html'">EXIT</button>
+            </nav>
+        </div>
+    </div>
+    <script>
+        document.getElementById('best-menu').textContent = localStorage.getItem('blockBest') || 0;
+    </script>
+</body>
+</html>

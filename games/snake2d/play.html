@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Worm - Playing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="worm-style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div class="hud">SCORE: <span id="scoreVal">0</span></div>
+    
+    <button id="pause-btn" onclick="window.gameControl.pause()">PAUSE</button>
+
+    <button id="pause-btn" onclick="window.gameControl.pause()">
+    <span class="pause-icon"></span> PAUSE
+    </button>
+
+    <div id="analog-container"><div id="stick"></div></div>
+
+    <div id="death-overlay" class="overlay hidden">
+        <div class="popup">
+            <h1 style="color:var(--neon-pink)">CRASHED</h1>
+            <p>SCORE: <span id="finalScore">0</span></p>
+            <button class="btn" onclick="location.reload()">RETRY</button>
+            <button class="btn btn-exit" onclick="window.gameControl.goHome()">HOME</button>
+        </div>
+    </div>
+
+    <div id="pause-overlay" class="overlay hidden">
+        <div class="popup">
+            <h1>PAUSED</h1>
+            <button class="btn" onclick="window.gameControl.resume()">CONTINUE</button>
+            <button class="btn btn-exit" onclick="window.gameControl.goHome()">HOME</button>
+        </div>
+    </div>
+
+    <div id="leaderboard" class="leaderboard-container">
+        <div class="lb-title">TOP 10 NEON WORM</div>
+            <div id="lb-list"></div>
+            <div id="my-rank" class="my-rank-style"></div>
+    </div>
+
+    <script src="player.js"></script>
+    <script src="bot-evo.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

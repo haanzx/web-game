@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --neon-blue: #00d4ff;
+    --neon-pink: #ff0075;
+    --bg-dark: #0a0a0c;
+}
+
+body {
+    margin: 0; padding: 0;
+    background-color: var(--bg-dark);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.btn {
+    display: block; width: 220px; margin: 15px auto; padding: 18px;
+    background: var(--neon-pink); border: none; color: white;
+    font-family: inherit; font-size: 12px; cursor: pointer;
+    box-shadow: 4px 4px 0 #80003b; transition: 0.1s;
+}
+
+.btn-exit { background: #444; box-shadow: 4px 4px 0 #222; }
+.btn:active { transform: translate(2px, 2px); box-shadow: none; }

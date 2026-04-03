@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Galaxy Hub - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-bg"></div>
+
+    <div class="dashboard-container">
+        <header class="hub-header">
+            <h1 class="hub-title">GALAXY HUB</h1>
+
+            <div class="header-right">
+                <button id="btn-specs" class="about-trigger" title="System Info">🖥️</button>
+                <button id="btn-about" class="about-trigger" title="About Hub">?</button>
+            </div>
+        </header>
+
+        <main class="game-selection">
+            <div class="game-grid">
+                <button class="game-card accent-blue" onclick="location.href='games/flappy-bird/index.html'">
+                    <span class="icon">🚀</span>
+                    <span class="title">FLAPPY BIRD</span>
+                </button>
+                <button class="game-card accent-crimson" onclick="location.href='games/chrome-dino/index.html'">
+                    <span class="icon">🦖</span>
+                    <span class="title">CHROME DINO</span>
+                </button>
+                <button class="game-card accent-slate" onclick="location.href='games/snake2d/index.html'">
+                    <span class="icon">🐍</span>
+                    <span class="title">SNAKE 2D</span>
+                </button>
+                <button class="game-card accent-slate" onclick="location.href='games/vampire-clone/index.html'">
+                    <span class="icon">⚔️</span>
+                    <span class="title">VAMPIRE CLONE</span>
+                </button>
+              <button class="game-card accent-slate" onclick="location.href='games/block-puzzle/index.html'">
+                    <span class="icon">⚔️</span>
+                    <span class="title">BLOCK PUZZLE</span>
+                </button>
+              <button class="game-card accent-slate" onclick="location.href='games/2048/index.html'">
+                    <span class="icon">⚔️</span>
+                    <span class="title">2048</span>
+                </button>
+                <button class="game-card locked"><span>🔒 INCOMING</span></button>
+            </div>
+        </main>
+
+        <footer class="hub-footer">
+            <p>USER: setiiono@endeavouros</p>
+            <p>V1.0.3-STABLE</p>
+        </footer>
+    </div>
+
+    <div id="specs-screen" class="screen-overlay" style="display: none;">
+        <div class="panel-structure specs-panel">
+            <h2 class="sub-title">SYSTEM DIAGNOSTICS</h2>
+            <div class="specs-list">
+                <div class="spec-item"><span>OS:</span> <span class="val">EndeavourOS (Web-Env)</span></div>
+                <div class="spec-item"><span>CPU:</span> <span id="pc-cpu" class="val">--</span></div>
+                <div class="spec-item"><span>RAM:</span> <span id="pc-ram" class="val">--</span></div>
+                <div class="spec-item"><span>BROWSER:</span> <span id="pc-brw" class="val">--</span></div>
+                <div class="spec-item"><span>LATENCY:</span> <span id="pc-ping" class="val">--</span></div>
+            </div>
+            <button id="btn-back-specs" class="gamer-btn secondary">CLOSE</button>
+        </div>
+    </div>
+
+    <div id="about-screen" class="screen-overlay" style="display: none;">
+        <div class="panel-structure">
+            <h2 class="sub-title">ABOUT SYSTEM</h2>
+            <div class="about-box">
+                <p>Galaxy Hub adalah portal game web personal.</p>
+                <hr>
+                <p>Dibuat dengan semangat Open Source.</p>
+                <p>Developer: Setiiono</p>
+            </div>
+            <button id="btn-back-about" class="gamer-btn secondary">CLOSE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

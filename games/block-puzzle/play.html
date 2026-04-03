@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Block Puzzle - Play</title>
+    <link rel="stylesheet" href="style-game.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-header">
+            <div class="score-box">
+                <span class="label">SCORE</span>
+                <div id="score">0</div>
+            </div>
+            <div class="score-box">
+                <span class="label">BEST</span>
+                <div id="best-score">0</div>
+            </div>
+            <button id="btn-pause">⏸</button>
+        </div>
+
+        <div id="game-board"></div>
+
+        <div id="block-spawner">
+            <div class="spawn-slot" id="slot-0"></div>
+            <div class="spawn-slot" id="slot-1"></div>
+            <div class="spawn-slot" id="slot-2"></div>
+        </div>
+
+        <div id="overlay" class="modal">
+            <div class="modal-content">
+                <h1 id="status-text">PAUSED</h1>
+                <button class="action-btn" id="btn-resume">CONTINUE</button>
+                <button class="action-btn exit" onclick="location.href='index.html'">EXIT</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

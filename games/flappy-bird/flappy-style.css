@@ -1,0 +1,66 @@
+/* Container untuk Skor saat bermain */
+#game-ui {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.score-tag {
+    font-size: 5rem;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-weight: 900;
+}
+
+/* Pop-up Scoreboard */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* Gelap tipis agar aset tetap kelihatan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup {
+    background: #ded895; /* Warna krem kertas scoreboard asli */
+    padding: 30px;
+    border: 3px solid var(--border-dark);
+    border-radius: 10px;
+    text-align: center;
+    min-width: 280px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.popup h2 {
+    color: #e86101;
+    -webkit-text-stroke: 1px var(--border-dark);
+    margin-top: 0;
+}
+
+.popup p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--border-dark);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Tombol Pause di pojok */
+.pause-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: 2px solid var(--border-dark);
+    padding: 8px 12px;
+    cursor: pointer;
+    pointer-events: auto;
+    font-weight: bold;
+}
