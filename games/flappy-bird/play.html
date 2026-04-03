@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Bird - Play</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flappy-style.css">
+</head>
+<body>
+    <div id="game-ui">
+        <button id="pause-btn" class="pause-icon">PAUSE</button>
+    </div>
+
+    <div id="overlay" class="overlay hidden">
+        <div class="popup" id="pause-popup">
+            <h2>GAME PAUSED</h2>
+            <button class="btn-main" onclick="gameControl.resume()">RESUME</button>
+            <button class="btn-main" onclick="location.href='index.html'">MAIN MENU</button>
+        </div>
+        
+        <div class="popup hidden" id="death-popup">
+            <h2>CRASHED!</h2>
+            <p>Skor Kamu: <span id="final-score">0</span></p>
+            <button class="btn-main" onclick="location.reload()">TRY AGAIN</button>
+            <button class="btn-main" onclick="location.href='index.html'">MAIN MENU</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="game.js"></script>
+    <script src="ai.js"></script>
+</body>
+</html>

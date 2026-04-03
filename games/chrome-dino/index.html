@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dino Prototype</title>
+    <link rel="stylesheet" href="dino-style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <button id="pause-btn" onclick="togglePause()">II</button>
+
+        <div class="score-board">
+            <span id="high-score">HI 00000</span> 
+            <span id="current-score">00000</span>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="pause-menu" class="overlay hidden">
+            <div class="menu-content">
+                <h2>PAUSED</h2>
+                <button class="menu-btn" onclick="togglePause()">RESUME</button>
+                <button class="menu-btn exit-btn" onclick="exitGame()">EXIT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

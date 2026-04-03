@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vampire Survivors - Arena</title>
+    <link rel="stylesheet" href="style-game.css">
+</head>
+<body>
+    <div id="game-ui">
+        <div class="xp-bar-container"><div id="xp-bar-fill"></div></div>
+        <div class="stats">
+            <span>LVL: <span id="level-val">1</span></span>
+            <span>TIME: <span id="time-val">00:00</span></span>
+        </div>
+
+        <div id="pause-overlay" class="overlay" style="display:none;">
+    <div class="menu-card">
+        <h2>GAME PAUSED</h2>
+        <button onclick="togglePause()">RESUME</button>
+        <button onclick="location.href='index.html'">MENU</button>
+    </div>
+</div>
+
+<div id="gameover-overlay" class="overlay" style="display:none;">
+    <div class="menu-card">
+        <h2>YOU DIED</h2>
+        <p>Level Terakhir: <span id="final-score">0</span></p>
+        <button onclick="location.reload()">COBA LAGI</button>
+        <button onclick="location.href='index.html'">MENU</button>
+    </div>
+</div>
+
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="player.js"></script>
+    <script src="enemy.js"></script>
+    <script src="weapon.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
